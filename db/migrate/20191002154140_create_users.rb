@@ -12,8 +12,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :role
       t.string :active_range
       t.string :image
-      t.tinyint :is_deleted
-      t.tinyint :scout_flg
+      t.integer :is_deleted
+      t.integer :scout_flg
 
       t.timestamps
     end
