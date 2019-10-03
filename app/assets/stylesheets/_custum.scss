@@ -59,6 +59,13 @@ p {
   line-height: 1.7em;
 }
 
+ul {
+  list-style: none;
+  padding: left;
+}
+
+/* typography */
+
 /* header */
 
 #logo {
@@ -75,6 +82,8 @@ p {
     text-decoration:none;
   }
 }
+
+/* header ENDLINE */
 
 /* footer */
 
