@@ -3,10 +3,10 @@
     <ul>
         <% @users.each do |user| %>
             <li>
-            <%= link_to user.name, users_show_path(user.id) %>
+            <%= link_to user.name, user_detail_path(user.id) %>
             </li>
         <% end %>
     </ul>
 
-    <%= link_to "Sign up now!", signup_path, class:"btn btn-lg btn-primary" %>
+    <%= link_to "Sign in now!", signup_path, class:"btn btn-lg btn-primary" %>
 </div>
