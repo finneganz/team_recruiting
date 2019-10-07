@@ -1,9 +1,9 @@
 @import "bootstrap";
 
 /* mixins,variables,etc, */
-$gray-medium-light:#eaeaea;
+$gray-medium-light:#727171;
 $gray-light:#f0f0f0;
-$gray-darker:#c4c4c4;
+$gray-darker:#4b4b4b;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -72,13 +72,13 @@ ul {
   float:left;
   margin-right:10px;
   font-size:1.7em;
-  color:white;
+  color:Black;
   text-transform:uppercase;
   letter-spacing:-1px;
   padding-top:9px;
   font-weight:bold;
   &:hover {
-    color:white;
+    color:$gray-darker;
     text-decoration:none;
   }
 }

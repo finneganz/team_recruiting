@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   #devise_for :users
   root 'users#index'
-  get '/help' => 'users#help', as: :help
+  get '/about' => 'static_pages#about', as: :about
+  get '/help' => 'static_pages#help', as: :help
+  get '/contact' => 'static_pages#contact', as: :contact
   #get '/show/:id' => 'users#show', as: :users_show
   #get '/signup' => 'users#new',as: :signup
   #post '/signup' => 'users#create'
