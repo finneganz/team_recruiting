@@ -2,11 +2,14 @@
     <h1>Team Recruiting App</h1>
     <ul>
         <% @users.each do |user| %>
-            <li>
-            <%= link_to user.name, user_detail_path(user.id) %>
-            </li>
+            <div class="user_board">
+                <li><%= link_to user.name, user_detail_path(user.id) %></li>
+            </div>
         <% end %>
     </ul>
-
-    <%= link_to "Sign in now!", signup_path, class:"btn btn-lg btn-primary" %>
+    <% if user_signed_in? %>
+        
+    <% else %>
+        <%= link_to "Sign in now!", signup_path, class:"btn btn-lg btn-primary" %>
+    <% end %>
 </div>

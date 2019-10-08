@@ -209,3 +209,27 @@ input {
   margin-left: 0;
 }
 
+/* forms ENDLINE */
+
+/* scout board */
+
+.user_board {
+  background:$gray-light;
+  width:800px;
+  height:30px;
+  /*float:left;*/
+  margin-right:10px;
+  font-size:1.1em;
+  color:Black;
+  text-transform:uppercase;
+  letter-spacing:-1px;
+  padding-top:4px;
+  font-weight:bold;
+  &:hover {
+    color:$gray-darker;
+    text-decoration:none;
+  }
+}
+
+
+/* scout board ENDLINE */
