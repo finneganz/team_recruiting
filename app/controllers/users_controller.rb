@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    #@scout = Scout.new(user_id:user_params[:id])
     if @user.save
       redirect_to @user
     else
