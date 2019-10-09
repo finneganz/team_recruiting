@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2019_10_09_040702) do
 
   create_table "scouts", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.string "name", null: false
+    t.string "name"
     t.string "introduction"
     t.string "active_week"
     t.string "mm_rank"

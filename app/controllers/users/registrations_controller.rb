@@ -6,13 +6,21 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
   # def new
-  #   super
+   # super
   # end
 
   # POST /resource
-   def create
-     super
-   end
+  def create
+    begin
+      ActiveRecord::Base.transaction do
+        super
+        ###新規登録したユーザー(親)が保有するスカウト情報(子)を作成する
+        resource.build_scout
+        resource.scout.name = resource.name
+        resource.save!
+      end
+    end
+  end
 
   # GET /resource/edit
    def edit
