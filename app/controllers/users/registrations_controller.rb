@@ -49,6 +49,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # プロフィール画面用のアクションを追加
   def detail
     @user = User.find_by(id: params[:id])
+    @scout = Scout.find_by(user_id: @user.id)
   end
 
   # protected
