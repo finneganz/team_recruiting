@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'scouts/new'
+  get 'scouts/index'
+  get 'scouts/show'
   #devise_for :users
   root 'users#index'
   get '/about' => 'static_pages#about', as: :about

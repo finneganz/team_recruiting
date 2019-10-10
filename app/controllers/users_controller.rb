@@ -2,6 +2,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    #@users.build_scout
+    #if Scout.find_by(scout_flg: 1).blank?
+    #  @scouts = nil
+    #else
+    #  @scouts = Scout.find_by(scout_flg: 1)
+    #end
   end
 
   def show

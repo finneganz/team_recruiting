@@ -16,6 +16,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         super
         ###新規登録したユーザー(親)が保有するスカウト情報(子)を作成する
         resource.build_scout
+        ###スカウト名はアカウント名を設定(デフォルト)
         resource.scout.name = resource.name
         resource.save!
       end

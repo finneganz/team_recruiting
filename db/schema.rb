@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_10_09_040702) do
     t.string "role"
     t.string "active_range"
     t.string "image"
-    t.integer "scout_flg"
+    t.integer "scout_flg", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_scouts_on_user_id"
