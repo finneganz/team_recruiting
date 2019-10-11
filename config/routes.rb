@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'scouts/new'
-  get 'scouts/index'
-  get 'scouts/show'
+  resources :scouts
+
+  root 'scouts#index'
+  get 'new' => 'scouts#new'
+  get '/:id' => 'scouts#show', as: :show
   #devise_for :users
-  root 'users#index'
+  #root 'users#index'
   get '/about' => 'static_pages#about', as: :about
   get '/help' => 'static_pages#help', as: :help
   get '/contact' => 'static_pages#contact', as: :contact
@@ -25,7 +27,7 @@ Rails.application.routes.draw do
     get "logout"  =>  "users/sessions#destroy", as: :logout
   end
 
-  resources :scouts
+
 
 
 end
