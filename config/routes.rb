@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'scouts#index'
   get 'new' => 'scouts#new'
-  get '/:id' => 'scouts#show', as: :show
+  get 'scout/:id' => 'scouts#show', as: :show
   #devise_for :users
   #root 'users#index'
   get '/about' => 'static_pages#about', as: :about
@@ -22,9 +22,9 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get "user/:id"  =>  "users/registrations#detail", as: :user_detail
-    get "signup"  =>  "users/registrations#new",as: :signup
-    get "login" => "users/sessions#new", as: :login
-    get "logout"  =>  "users/sessions#destroy", as: :logout
+    get "users/signup"  =>  "users/registrations#new",as: :signup
+    get "users/login" => "users/sessions#new", as: :login
+    get "users/logout"  =>  "users/sessions#destroy", as: :logout
   end
 
 
