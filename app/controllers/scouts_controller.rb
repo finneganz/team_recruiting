@@ -12,7 +12,8 @@ class ScoutsController < ApplicationController
   end
 
   def show
-      @scout = Scout.find(params[:id])
+    @scout = Scout.find(params[:id])
+    @user = User.find(@scout.user_id)
   end
 
 end
