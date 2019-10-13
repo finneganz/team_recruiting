@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'scouts#index'
   get 'new' => 'scouts#new'
   get 'scout/:id' => 'scouts#show', as: :show
+  get 'scout/:id/edit' => 'scouts#edit', as: :scout_edit
+  get 'scout/:id/update' => 'scouts#update', as: :scout_update
   #devise_for :users
   #root 'users#index'
   get '/about' => 'static_pages#about', as: :about

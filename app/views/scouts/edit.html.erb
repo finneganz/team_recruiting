@@ -1,0 +1,26 @@
+<h2>Edit Scout Profile</h2>
+
+<%= form_for(@scout, url: {action:'update' }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: @scout %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "名前" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :introduction %><br />
+    <%= f.text_field :introduction, autocomplete: "新しい自己紹介" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mm_rank %><br />
+    <%= f.text_field :mm_rank, autocomplete: "マッチメイキングのランク" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+
+<%= link_to "Back", :back %>
