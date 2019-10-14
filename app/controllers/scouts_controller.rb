@@ -32,6 +32,6 @@ class ScoutsController < ApplicationController
   protected
 
     def scout_update_params
-      params.require(:scout).permit(:name, :introduction, :mm_rank)
+      params.require(:scout).permit(:name, :introduction, :mm_rank, :scout_flg)
     end
 end
