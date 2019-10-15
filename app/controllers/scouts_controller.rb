@@ -9,7 +9,7 @@ class ScoutsController < ApplicationController
     @print = @scouts
     if @scouts.blank?
       @scouts = nil
-    else
+    else  @scouts = search_query
     end
   end
 
@@ -44,5 +44,13 @@ class ScoutsController < ApplicationController
       params.require(:scout).permit(:name, :introduction, :active_week, :mm_rank,
                                       :pugs_elo, :active_time, :playstyle,
                                       :role, :active_range, :scout_flg)
+    end
+
+    def search_query
+      if params[:scout].present? && params[:scout][:mm_rank]
+        Scout.where('mm_rank LIKE ?', "%#{params[:scout][:mm_rank]}%")
+      else
+        Scout.all
+      end
     end
 end

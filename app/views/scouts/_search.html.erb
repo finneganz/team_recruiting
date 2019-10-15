@@ -1,0 +1,5 @@
+<%= form_with model: Scout.new, url: root_path do |f| %>
+    <%= f.label :mm_rank, 'MMのランク' %>
+    <%= f.text_field :mm_rank, value: (params[:scout][:mm_rank] if params[:scout]) %>
+    <%= f.submit '検索する' %>
+<% end %>
