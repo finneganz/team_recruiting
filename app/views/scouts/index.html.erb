@@ -8,7 +8,7 @@
         <% else %>
             <% @scouts.each do |scout| %>
                 <div class="user_board">
-                    <li><%= link_to scout.name, show_path(scout.id) %></li>
+                    <li><%= link_to scout.name, scout_show_path(scout.id) %></li>
                 </div>
             <% end %>
         <% end %>
