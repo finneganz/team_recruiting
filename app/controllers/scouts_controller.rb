@@ -1,4 +1,6 @@
 class ScoutsController < ApplicationController
+  #before_action :authenticate_user!,  only: [:edit, :update]
+
   def new
   end
 
@@ -17,13 +19,20 @@ class ScoutsController < ApplicationController
   end
 
   def edit
-    @scout = Scout.find_by(id: params[:id])
+    @scout = current_user.scout
+    #現在のユーザーのスカウト情報か判定
+      if @scout.user_id.to_s == params[:id]
+        #@scout = @scout.user_id
+    #別ユーザーのスカウト情報更新ページを開こうとしている場合は、nil
+      else  @scout = nil
+      end
+      
   end
 
   def update
     @scout = Scout.find(params[:id])
     if  @scout.update_attributes(scout_update_params)
-	    redirect_to show_path(params[:id]), notice: 'プロフィールを更新しました'
+	    redirect_to scout_show_path(params[:id]), notice: 'プロフィールを更新しました'
     else
       render 'edit'
     end
