@@ -4,22 +4,53 @@
   <%= render "devise/shared/error_messages", resource: @scout %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label "プレイヤーネーム" %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "名前" %>
   </div>
 
-  <div class="field">
-    <%= f.label :introduction %><br />
-    <%= f.text_field :introduction, autocomplete: "新しい自己紹介" %>
+  <div class="textarea">
+    <%= f.label "自己紹介文" %><br />
+    <%= f.text_area :introduction, autocomplete: "新しい自己紹介" %>
   </div>
 
   <div class="field">
-    <%= f.label :mm_rank %><br />
+    <%= f.label "マッチメイキングのランク" %><br />
     <%= f.text_field :mm_rank, autocomplete: "マッチメイキングのランク" %>
   </div>
 
+  <div class="field">
+    <%= f.label "PUGのELO" %><br />
+    <%= f.text_field :pugs_elo, autocomplete: "PUGのELOを入力" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "ゲーム中のRole" %><br />
+    <%= f.text_field :role, autocomplete: "Roleを入力" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "プレイスタイル" %><br />
+    <%= f.text_field :playstyle, autocomplete: "プレイスタイルを入力" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "1週間のうちに活動できる日数" %><br />
+    <%= f.text_field :active_week, autocomplete: "1週間のうちに活動できる日数(イン率)を入力" %>
+  </div> 
+
+  <div class="field">
+    <%= f.label "活動できる時間" %><br />
+    <%= f.text_field :active_time, autocomplete: "活動できる時間を入力" %>
+  </div> 
+
+  <%# スカウト実施フラグの設置 %>
+  <div class ="checkbox">
+    <%= f.label "スカウト一覧に表示する" %>
+    <%= f.check_box :scout_flg, {:checked => false }, checked_value = 1, unchecked_value = 0 %>
+  </div>
+
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "スカウト情報を更新する" %>
   </div>
 <% end %>
 
