@@ -18,6 +18,31 @@
     <%= f.text_field :mm_rank, autocomplete: "マッチメイキングのランク" %>
   </div>
 
+  <div class="field">
+    <%= f.label "PUGのELO" %><br />
+    <%= f.text_field :pugs_elo, autocomplete: "PUGのELOを入力" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "ゲーム中のRole" %><br />
+    <%= f.text_field :role, autocomplete: "Roleを入力" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "プレイスタイル" %><br />
+    <%= f.text_field :playstyle, autocomplete: "プレイスタイルを入力" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "1週間のうちに活動できる日数" %><br />
+    <%= f.text_field :active_week, autocomplete: "1週間のうちに活動できる日数(イン率)を入力" %>
+  </div> 
+
+  <div class="field">
+    <%= f.label "活動できる時間" %><br />
+    <%= f.text_field :active_time, autocomplete: "活動できる時間を入力" %>
+  </div> 
+
   <%# スカウト実施フラグの設置 %>
   <div class ="checkbox">
     <%= f.label "スカウト一覧に表示する" %>
