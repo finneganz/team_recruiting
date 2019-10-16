@@ -1,14 +1,18 @@
-<%= search_form_for @q, url: root_path do |f| %>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+    <%= search_form_for @q, url: root_path do |f| %>
 
-    <%= f.label :mm_rank, 'MMのランク' %>
-    <%= f.search_field :mm_rank_cont %>
+        <%= f.label :mm_rank, 'MMのランク' %>
+        <%= f.search_field :mm_rank_cont %>
 
-    <%= f.label :pugs_elo, 'PUGのELO' %>
-    <%= f.number_field :pugs_elo_gteq %>以上〜
-    <%= f.number_field :pugs_elo_lt %>未満<br />
+        <%= f.label :pugs_elo, 'PUGのELO' %>
+        <%= f.number_field :pugs_elo_gteq %>以上〜
+        <%= f.number_field :pugs_elo_lt %>未満<br />
 
-    <%= f.label :active_time, '活動時間' %>
-    <%= f.search_field :active_time_cont %>
+        <%= f.label :active_time, '活動時間' %>
+        <%= f.search_field :active_time_cont %>
         
-    <%= f.submit '検索する' %>
-<% end %>
+        <%= f.submit '検索する' %>
+    <% end %>
+    </div>
+</div>
