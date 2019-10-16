@@ -6,6 +6,7 @@
             <h3>スカウト情報が見つかりませんでした。</h3>
 
         <% else %>
+            <%= render 'search' %>
             <% @scouts.each do |scout| %>
                 <div class="user_board">
                     <li><%= link_to scout.name, scout_show_path(scout.id) %></li>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'scouts#index'
+  post '/' => 'scouts#index'
   get 'new' => 'scouts#new'
   get 'scout/:id' => 'scouts#show', as: :scout_show
   get 'scout/:id/edit' => 'scouts#edit', as: :scout_edit

@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem 'coffee-rails', '4.2.2'
 gem 'devise', '4.7.1'
 gem "bootstrap", ">= 4.3.1"
+gem 'ransack', '~> 2.3.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
