@@ -50,17 +50,6 @@ class ScoutsController < ApplicationController
     def search_query
       @q = Scout.ransack(params[:q])
       @scouts = @q.result(distinct: true).where(scout_flg: 1).order(updated_at: :desc)
-        #if params[:scout].present? && params[:scout].s_attr #params[:scout][:mm_rank]
-          #Scout.where('mm_rank LIKE ?', "%#{params[:scout][:mm_rank]}%")
-        #  Scout.where(' LIKE ?', "%#{params[:scout][s_attr]}%")
-        #else
-        #  Scout.all
-        #end
-    
-    end
-
-    def search_attrs
-      params.require(:scout).permit(:active_week, :mm_rank, :pugs_elo, :active_time, :playstyle, :role)
     end
 
   end

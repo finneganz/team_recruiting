@@ -1,8 +1,10 @@
 <h2>プロフィール</h2>
     <ul>
-        <li><%#= @scout.user_id %></li>
-        <li><%= @scout.name %></li>
-        <li><%= @scout.introduction %></li>
-        <li><%= @scout.active_week %></li>
-        <li><%= @scout.mm_rank %></li>
+        <div class="scout_show">
+            
+            <li>プレイヤー名</li><%= @scout.name %><br/>
+            <li>自己紹介</li><%= @scout.introduction %><br/>
+            <li>イン率</li><%= @scout.active_week %><br/>
+            <li>MMのランク</li><%= @scout.mm_rank %><br/>
+        </div>
     </ul>
