@@ -1,5 +1,6 @@
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-3 col-md-offset-3">
+    <div class="search_bar">
     <%= search_form_for @q, url: root_path do |f| %>
 
         <%= f.label :mm_rank, 'MMのランク' %>
@@ -12,9 +13,10 @@
         <%= f.label :active_time, '活動時間' %>
         <%= f.search_field :active_time_cont %>
 
-        
+
         
         <%= f.submit '検索する' %>
     <% end %>
+    </div>
     </div>
 </div>

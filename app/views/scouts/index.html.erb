@@ -3,17 +3,24 @@
     <ul>
         <% if @scouts.nil? %>
             <%# なかった時の処理 %>
-            <h3>スカウト情報が見つかりませんでした。</h3>
-
+            <div class="board_info">
+                <li>スカウト情報が見つかりませんでした。</li>
+            </div>
         <% else %>
             <%= render 'search' %>
             <% @scouts.each do |scout| %>
-                <div class="user_board">
-                    <li><%= link_to scout.name, scout_show_path(scout.id) %></li>
+                <% if scout.blank? %>
                     <div class="board_info">
-                        <%= scout.introduction %><%= scout.active_week %>
+                        <li>スカウト情報が見つかりませんでした。</li>
                     </div>
-                </div>
+                <% else %>
+                    <div class="user_board">
+                        <li><%= link_to scout.name, scout_show_path(scout.id) %></li>
+                        <div class="board_info">
+                            <%= scout.introduction %><%= scout.active_week %>
+                        </div>
+                    </div>
+                <% end %>
             <% end %>
         <% end %>
     </ul>
