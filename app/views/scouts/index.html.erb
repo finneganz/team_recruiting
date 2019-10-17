@@ -10,6 +10,9 @@
             <% @scouts.each do |scout| %>
                 <div class="user_board">
                     <li><%= link_to scout.name, scout_show_path(scout.id) %></li>
+                    <div class="board_info">
+                        <%= scout.introduction %><%= scout.active_week %>
+                    </div>
                 </div>
             <% end %>
         <% end %>
