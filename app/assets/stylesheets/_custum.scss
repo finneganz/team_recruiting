@@ -273,9 +273,9 @@ input {
 
 /* search bar STARTLINE */
 
-.search_bar  {
-  float:left;
-
+#search_bar  {
+  float:clear;
+  color: blue;
 }
 
 /* search bar ENDLINE */
