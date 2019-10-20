@@ -33,6 +33,13 @@ textarea {
   }
 }
 
+.container-fluid{
+    background-color: #f0f0f0;
+    border-radius: 4px; 
+    padding: 50px 0 30px 0;
+  
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -273,9 +280,11 @@ input {
 
 /* search bar STARTLINE */
 
-#search_bar  {
-  float:clear;
+.search_bar  {
+  float:center;
   color: blue;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 /* search bar ENDLINE */
