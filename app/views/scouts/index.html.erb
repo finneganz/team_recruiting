@@ -1,5 +1,7 @@
 <div class="center jumbotron">
     <h1>Team Recruiting App</h1>
+</div><!--center jumbotron -->
+<div class="container-fluid">
     <ul>
         <% if @scouts.nil? %>
             <%# なかった時の処理 %>
@@ -27,6 +29,9 @@
     <% if user_signed_in? %>
         
     <% else %>
-        <%= link_to "Sign in now!", signup_path, class:"btn btn-lg btn-primary" %>
+    <div class="center">
+        <%= link_to "ユーザー登録", signup_path, class:"btn btn-lg btn-primary" %>
+    </div>
     <% end %>
-</div>
+
+</div><!-- container -->

@@ -1,22 +1,40 @@
-<div class="row">
-    <div class="col-md-3 col-md-offset-3">
+<div class="row justify-content-around">
+    
     <div class="search_bar">
     <%= search_form_for @q, url: root_path do |f| %>
-
+    <div class="form-inline clearfix">
+        <div class="col-sm-2 mx-auto">
         <%= f.label :mm_rank, 'MMのランク' %>
-        <%= f.search_field :mm_rank_cont %>
-
-        <%= f.label :pugs_elo, 'PUGのELO' %>
-        <%= f.number_field :pugs_elo_gteq %>以上〜
-        <%= f.number_field :pugs_elo_lt %>未満<br />
-
+        <%= f.search_field :mm_rank_cont , class: "form-control-sm" %>
+        </div>
+        <div class="col-md-3 mx-auto">
+        <%= f.label :pugs_elo, 'PUGのELO'%>
+        <div class="form-inline">
+        <%= f.number_field :pugs_elo_gteq , class: "form-control-sm col-sm-3" %>以上〜
+        <%= f.number_field :pugs_elo_lt , class: "form-control-sm col-sm-3" %>未満<br />
+        </div>
+        </div>
+        <div class="col-md-2 mx-auto">
         <%= f.label :active_time, '活動時間' %>
-        <%= f.search_field :active_time_cont %>
-
-
-        
-        <%= f.submit '検索する' %>
+        <%= f.search_field :active_time_cont , class: "form-control-sm" %>
+        </div>
+        <div class="col-md-2">
+        <%= f.label :active_week, '1週間のイン率' %>
+        <%= f.search_field :active_week_cont , class: "form-control-sm" %>
+        </div>
+        <div class="col-md-2">
+        <%= f.label :playstyle, 'プレイスタイル' %>
+        <%= f.search_field :playstyle_cont , class: "form-control-sm" %>
+        </div>
+        <div class="col-md-2">
+        <%= f.label :role, 'ゲーム内のROLE' %>
+        <%= f.search_field :role_cont , class: "form-control-sm" %>
+        </div>
+    </div><!-- form-inline -->
+        <div class="col-md-4 mx-auto">
+        <%= f.submit '検索する' , class: "btn btn-md btn-secondary" %>
+        </div>
     <% end %>
-    </div>
+    
     </div>
 </div>
