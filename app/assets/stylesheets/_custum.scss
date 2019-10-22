@@ -74,6 +74,16 @@ ul {
 /* typography */
 
 /* header */
+header {
+  ul {
+      float:right;
+      list-style:none;
+      li {
+        float:left;
+        margin-left:15px;
+      }
+    }
+}
 
 #logo {
   background: white;
